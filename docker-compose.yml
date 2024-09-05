@@ -44,13 +44,14 @@ services:
   db-testing:
     image: postgres:15
     expose:
-      - '5433'
+      - '5434'
     ports:
-      - '5433:5433'
+      - '5434:5434'
     environment:
-      POSTGRES_PASSWORD: testing
-      POSTGRES_DB: testing
-      POSTGRES_USER: testing
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: 'laravel_testing'
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_HOST_AUTH_METHOD: trust
     networks:
       - lara.network
 
