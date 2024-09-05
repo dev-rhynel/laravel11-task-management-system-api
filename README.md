@@ -37,3 +37,8 @@
 
 ![Task Completed](https://github.com/user-attachments/assets/491ace21-68e0-4b94-9eb6-3bc7a44a523c)
 ![Reset Password](https://github.com/user-attachments/assets/3f664ddb-2458-4d9e-9757-37f49e715c82)
+
+
+#API DOCUMENTATION
+![Screenshot from 2024-09-06 00-39-08](https://github.com/user-attachments/assets/53d16f91-65e8-4693-8b33-ef035bec19a3)
+#Link: https://documenter.getpostman.com/view/38116477/2sAXjPzpJy#dde4fb8a-e14c-4bec-9162-42dd95a9fcc2
