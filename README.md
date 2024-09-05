@@ -16,10 +16,10 @@ or
 - Install docker/docker-compose
 
 ## Run Engine
-- Make start
-- or docker compose up -d
+- Type "make start"
+- or "docker compose up -d"
 
 ## Test
 - Type "make test" 
-- Or docker exec $(APP_CONTAINER) php artisan test
+- Or "docker exec $(APP_CONTAINER) php artisan test"
 
