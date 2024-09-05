@@ -1,5 +1,5 @@
 APP_CONTAINER = rhynel-technical-test-laravel-app-1
-DB_CONTAINER = rhynel-technical-test-laravel-db-pgsql-1
+DB_CONTAINER = rhynel-technical-test-laravel-db-testing-1
 
 start:
 	docker compose up -d
