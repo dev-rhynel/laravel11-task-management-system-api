@@ -23,3 +23,14 @@ or
 - Type "make test" 
 - Or "docker exec $(APP_CONTAINER) php artisan test"
 
+## Build
+- Type "make build" 
+- Or "docker buildx build --platform linux/amd64 -t rhynel-technical-test-laravel ."
+
+## App Bash
+- Type "make bash"
+- or "docker exec -it $(APP_CONTAINER) bash"
+
+## SQL Bash
+- Type "make bash"
+- or docker exec -it $(DB_CONTAINER) bash
