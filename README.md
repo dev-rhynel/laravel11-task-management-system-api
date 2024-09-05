@@ -13,9 +13,13 @@
 or
 
 ## Direct install docker
-- Install docker
-- type "docker compose up -d"
+- Install docker/docker-compose
+
+## Run Engine
+- Make start
+- or docker compose up -d
 
 ## Test
-Type "make test" or docker exec $(APP_CONTAINER) php artisan test
+- Type "make test" 
+- Or docker exec $(APP_CONTAINER) php artisan test
 
