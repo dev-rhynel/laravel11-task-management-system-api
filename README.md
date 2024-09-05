@@ -22,7 +22,7 @@
 
 ## Build
 - Type "make build" 
-- Or "docker buildx build --platform linux/amd64 -t rhynel-technical-test-laravel ."
+- Or "docker buildx build --platform linux/amd64 -t task-management-system-laravel ."
 
 ## App Bash
 - Type "make bash"
