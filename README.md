@@ -40,5 +40,5 @@
 
 
 #API DOCUMENTATION
-![Screenshot from 2024-09-06 00-39-08](https://github.com/user-attachments/assets/53d16f91-65e8-4693-8b33-ef035bec19a3)
+![image](https://github.com/user-attachments/assets/1b0c9b4a-4273-4e8b-bbd6-0ac8d7260079)
 #Link: https://documenter.getpostman.com/view/38116477/2sAXjPzpJy#dde4fb8a-e14c-4bec-9162-42dd95a9fcc2
