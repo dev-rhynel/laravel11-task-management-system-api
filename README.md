@@ -31,3 +31,9 @@
 ## SQL Bash
 - Type "make sql"
 - or docker exec -it $(DB_CONTAINER) bash
+
+
+##screenshots
+
+![Task Completed](https://github.com/user-attachments/assets/491ace21-68e0-4b94-9eb6-3bc7a44a523c)
+![Reset Password](https://github.com/user-attachments/assets/3f664ddb-2458-4d9e-9757-37f49e715c82)
