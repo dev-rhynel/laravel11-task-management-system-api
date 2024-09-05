@@ -12,7 +12,7 @@ Route::controller(AuthenticationController::class)->group(function () {
     Route::post('account/auth/verify', 'verify')->name('verify');
     Route::post('account/auth/password/request', 'requestPasswordResetLink')->name('request-password-resetLink');
     Route::post('account/auth/password/validate', 'validatePasswordToken')->name('validate-password-token');
-    Route::post('account/auth/password/set', 'setPassword');
+    Route::post('account/auth/password/set', 'setPassword')->name('set-password');
 
     // Logout
     Route::delete('account/auth/logout', 'logout')->name('logout')->middleware('auth:api');
