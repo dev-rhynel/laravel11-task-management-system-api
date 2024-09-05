@@ -29,5 +29,5 @@
 - or "docker exec -it $(APP_CONTAINER) bash"
 
 ## SQL Bash
-- Type "make bash"
+- Type "make sql"
 - or docker exec -it $(DB_CONTAINER) bash
