@@ -1,0 +1,84 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: ./vendor/laravel/sail/runtimes/8.2
+      dockerfile: Dockerfile
+      args:
+        www_group: ${WWW_GROUP}
+    image: sail-8.2/app
+    ports:
+      - "${APP_PORT:-8000}:80"
+      - "${VITE_PORT:-5173}:${VITE_PORT:-5173}"
+    environment:
+      DB_HOST: ${DB_HOST}
+      DB_PORT: 5432
+      DB_DATABASE: ${DB_DATABASE}
+      DB_USERNAME: ${DB_USERNAME}
+      DB_PASSWORD: ${DB_PASSWORD}
+      WWW_USER: ${WWW_USER}
+      LARAVEL_SAIL: 1
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - pgsql
+      - db-testing
+    networks:
+      - lara.network
+
+  pgsql:
+    image: postgres:15
+    ports:
+      - "${DB_PORT:-5432}:5432"
+    environment:
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_DATABASE}
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_HOST_AUTH_METHOD: trust
+    volumes:
+      - sail-db:/var/lib/postgresql/data
+    networks:
+      - lara.network
+
+  db-testing:
+    image: postgres:15
+    expose:
+      - '5433'
+    ports:
+      - '5433:5433'
+    environment:
+      POSTGRES_PASSWORD: testing
+      POSTGRES_DB: testing
+      POSTGRES_USER: testing
+    networks:
+      - lara.network
+
+  redis:
+    image: "redis:alpine"
+    ports:
+      - "6379:6379"
+    volumes:
+      - "sail-redis:/data"
+    networks:
+      - lara.network
+
+  mailhog:
+    image: "mailhog/mailhog:latest"
+    ports:
+        - "${FORWARD_MAILHOG_SMTP_PORT:-1025}:1025"
+        - "${FORWARD_MAILHOG_HTTP_PORT:-8025}:8025"
+    networks:
+      - lara.network
+
+volumes:
+  sail-db:
+    driver: local
+  sail-redis:
+    driver: local
+
+networks:
+  lara.network:
+    external: true
+    name: lara-network
+
