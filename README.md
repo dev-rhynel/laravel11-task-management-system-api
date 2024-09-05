@@ -9,7 +9,7 @@
 
 # Task Management System - Rhynel Algopera
 ## Install Make, See Makefile
-## Or install directly the docker
+## Or directly install docker
 - Install docker/docker-compose
 
 ## Run Engine
